@@ -12,6 +12,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
    
   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Patrick+Hand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
@@ -28,51 +32,55 @@
 
     <!--    header -->
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <img src="img/logo-01.png" width="40" height="32">
+      <a href="https://www.thelivegreenco.cl/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none" target="_blank">
+      <img src="img/logo-01.png" width="40" height="32" alt="logo">
       <span class="fs-4">Live green co</span>
     </a>
   </header>  
        
-<!--   prijcipal nuevo -->
-    <main>
+<!--   principal main -->
+    <main class="d-flex">
       <div class="row featurette">
         <div class="col-md-7">
-          <h1 class="featurette-heading">Alimentos hechos con plantas. <span class="text-muted">Usando tecnologia y ciencia.</span></h1>
-          <p class="lead">Sabrosos, sanos y sustentables.</p>
+          <h1 class="featurette-heading">Alimentos hechos con plantas.</h1>
+          <h3>Usando tecnología y ciencia, puedes comer sano, sustentable y sabroso.</h3>
+  
           <ul>
             <li>Sabores nuevos y auténticos</li>
             <li>Sin colesterol ni grasas trans</li>
             <li>Cero plástico, ayudas al planeta</li>
           </ul>
-          <br>
-          <p>Si quieres vender nuestros productos, envianos tus correo</p> 
+          <br> 
+          <form>
+            <div class="mb-3">
+              <label for="txtemail" class="form-label ">Tú correo electrónico</label>
+                <input type="email" class="form-control" id="txtemail" autocomplete="email"   placeholder="Escribe tu correo..."> 
+            </div>
+                   
+             <button type="button" onclick="validarCorreo()" class="btn btn-success btn-lg">Quiero vender</button>
+             <br>
+             <br>
+             
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                  Declaras que aceptas las Condiciones de servicio y la Política de privacidad de The live green co.
+                </li>
+              </ul>
+            </form>
+             </div>
+          
         </div>
-          <div class="col-md-5">
-            <img src="img/comer-01.png" width="500" height="300" class="img-fluid" alt="hamburguesa de porotos">  
+          
+        
+        
+        <div class="col-md-5 d-none d-md-block">
+            <img src="img/mix-hamb.png" width="560" height="430" class="img-fluid" alt="hamburguesa de porotos">  
           </div> 
         </main>
    
-          <!--Formulario-->
-      <form>
-        <div class="mb-3">
-          <label for="txtemail" class="form-label ">Tú correo electrónico</label>
-            <input type="email" class="form-control" id="txtemail" aria-describedby="emailHelp" autocomplete="email"   placeholder="Escribe tu correo..."> 
-        </div>
-               
-          </ul>
-            <button type="button" onclick="validarCorreo()" class="btn btn-success btn-lg">Quiero vender</button>
-         <br>
-         <br>
-         
-          <ul class="list-group">
-            <li class="list-group-item">
-              <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
-              Declaras que aceptas las Condiciones de servicio y la Política de privacidad de The live green co.
-            </li>
-          </ul>
-         </div>
-        </form>
+     
+    
 
 <!-- Productos top-->
  <section class="productos">
@@ -125,20 +133,20 @@
   <div class="col-lg-4">
     <img src="img/logo-natural-food.jpeg" alt="Natural food" width="140" height="140">
     <h4>Natural food</h4>
-    <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-    <p>Karen Fuentes / Ceo Natural food</p>
+    <p>Maximo sabor de origen vegetal, esa es la opinión de muchos de nuestros clientes</p>
+    <p class="cursiva">Karen Fuentes / Ceo Natural food</p>
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">
     <img src="img/Logo_Jumbo.png" width="140" height="140" alt="Logo Jumbo">
     <h4>Jumbo</h4>
-    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-    <p>Oscar Ruiz / Jefe de productos Jumbo</p>
+    <p>Hamburguesas y helados vegamos que gustan a todo tipo de clientes, veganos o no.</p>
+    <p class="cursiva">Oscar Ruiz / Jefe de productos Jumbo</p>
   </div><!-- /.col-lg-4 -->
   <div class="col-lg-4">
     <img src="img/logo-the-vurger.jpeg" width="140" height="140" alt="">
     <h4>The vurger</h4>
-    <p>And lastly this, the third column of representative placeholder content.</p>
-    <p>Lisa Minnelli / Ceo The vurger</p>
+    <p>Hamburguesas veganas que no parecen veganas, máximo sabor y máxima salud.</p>
+    <p class="cursiva">Lisa Minnelli / Ceo The vurger</p>
   </div><!-- /.col-lg-4 -->
 </div>
 </section>
@@ -156,8 +164,12 @@
         
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
               
-              <li class="ms-3"><a class="fas fa-gift" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-              <li class="ms-3"><a class="fas fa-gift" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              <li class="ms-3"><a class="fas" href="https://www.facebook.com/thelivegreenco" target="_blank">
+                <i class="fab fa-facebook-square"></i>
+              </a></li>
+              <li class="ms-3"><a class="fas" href="https://www.instagram.com/thelivegreenco/" target="_blank">
+                <i class="fab fa-instagram-square"></i>
+              </a></li>
             </ul>
           </footer>
         </div>
